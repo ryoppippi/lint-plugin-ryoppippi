@@ -1,7 +1,7 @@
 import type { ESLint, Linter } from 'eslint';
 import { version } from '../package.json';
-import noHttpUrl from './rules/no-http-url';
-import requireCommentOnUseEffect from './rules/require-comment-on-useEffect';
+import * as noHttpUrl from './rules/no-http-url';
+import * as requireCommentOnUseEffect from './rules/require-comment-on-useEffect';
 
 export type Plugin = {
 	configs: {
@@ -16,8 +16,8 @@ const plugin = {
 		version,
 	},
 	rules: {
-		'no-http-url': noHttpUrl,
-		'require-comment-on-useEffect': requireCommentOnUseEffect,
+		[noHttpUrl.RULE_NAME]: noHttpUrl.default,
+		[requireCommentOnUseEffect.RULE_NAME]: requireCommentOnUseEffect.default,
 	},
 	configs: {} as Plugin['configs'],
 } as const satisfies Plugin;
