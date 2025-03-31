@@ -1,5 +1,5 @@
 import { run } from './_test';
-import rule, { RULE_NAME } from './no-http-url';
+import rule from './no-http-url';
 
 const valid = [
 	`'https'`,
@@ -89,7 +89,7 @@ const invalid = [
 ];
 
 await run({
-	name: RULE_NAME,
+	name: 'no-http-url',
 	rule,
 	valid,
 	invalid,

@@ -1,5 +1,5 @@
 import { run } from './_test';
-import rule, { RULE_NAME } from './require-comment-on-useEffect';
+import rule from './require-comment-on-useEffect';
 
 const valid = [
 	`
@@ -18,7 +18,7 @@ useEffect(() => {
 ];
 
 await run({
-	name: RULE_NAME,
+	name: 'require-comment-on-useEffect',
 	rule,
 	valid,
 	invalid: invalids.map(i => ({
