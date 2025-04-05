@@ -19,7 +19,7 @@ importers:
         specifier: ^0.2.1
         version: 0.2.1(@typescript-eslint/utils@8.28.0(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.23.0(jiti@2.4.2)))(eslint@9.23.0(jiti@2.4.2))(typescript@5.8.2)(vitest@3.1.1(@types/debug@4.1.12)(@types/node@22.14.0)(jiti@2.4.2)(yaml@2.7.0))
       '@types/node':
-        specifier: ^22.13.17
+        specifier: ^22.14.0
         version: 22.14.0
       '@typescript-eslint/parser':
         specifier: ^8.29.0
