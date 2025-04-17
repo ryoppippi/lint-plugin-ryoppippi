@@ -2,7 +2,7 @@
 	"name": "eslint-plugin-ryoppippi",
 	"type": "module",
 	"version": "0.2.6",
-	"packageManager": "pnpm@10.8.0",
+	"packageManager": "pnpm@10.8.1",
 	"description": "",
 	"author": "",
 	"license": "MIT",
