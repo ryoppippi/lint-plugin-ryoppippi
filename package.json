@@ -51,7 +51,7 @@
 		"@types/node": "^22.15.17",
 		"@typescript-eslint/parser": "^8.32.1",
 		"@typescript-eslint/typescript-estree": "^8.32.1",
-		"eslint": "^9.25.1",
+		"eslint": "^9.26.0",
 		"eslint-plugin-format": "^1.0.1",
 		"eslint-vitest-rule-tester": "^2.2.0",
 		"publint": "^0.3.12",
