@@ -49,7 +49,7 @@
 		"@antfu/ni": "^25.0.0",
 		"@ryoppippi/eslint-config": "^0.2.1",
 		"@types/node": "^24.0.10",
-		"@typescript-eslint/parser": "^8.35.1",
+		"@typescript-eslint/parser": "^8.36.0",
 		"@typescript-eslint/typescript-estree": "^8.35.1",
 		"eslint": "^9.30.1",
 		"eslint-plugin-format": "^1.0.1",
