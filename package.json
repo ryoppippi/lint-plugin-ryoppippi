@@ -53,7 +53,7 @@
 		"@typescript-eslint/typescript-estree": "^8.44.1",
 		"eslint": "^9.36.0",
 		"eslint-plugin-format": "^1.0.2",
-		"eslint-vitest-rule-tester": "^2.2.1",
+		"eslint-vitest-rule-tester": "^2.2.2",
 		"publint": "^0.3.13",
 		"typescript": "^5.9.2",
 		"ufo": "^1.6.1",
