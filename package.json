@@ -54,7 +54,7 @@
 		"eslint": "^9.38.0",
 		"eslint-plugin-format": "^1.0.2",
 		"eslint-vitest-rule-tester": "^2.3.0",
-		"publint": "^0.3.14",
+		"publint": "^0.3.15",
 		"typescript": "^5.9.3",
 		"ufo": "^1.6.1",
 		"unbuild": "^3.6.1",
