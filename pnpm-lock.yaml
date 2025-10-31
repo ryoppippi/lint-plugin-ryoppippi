@@ -17,10 +17,10 @@ importers:
         version: 27.0.1
       '@ryoppippi/eslint-config':
         specifier: ^0.2.1
-        version: 0.2.1(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))
+        version: 0.2.1(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))
       '@types/node':
-        specifier: ^24.9.1
-        version: 24.9.1
+        specifier: ^24.9.2
+        version: 24.9.2
       '@typescript-eslint/parser':
         specifier: ^8.46.2
         version: 8.46.2(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)
@@ -35,7 +35,7 @@ importers:
         version: 1.0.2(eslint@9.38.0(jiti@2.5.1))
       eslint-vitest-rule-tester:
         specifier: ^2.3.0
-        version: 2.3.0(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))
+        version: 2.3.0(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))
       publint:
         specifier: ^0.3.15
         version: 0.3.15
@@ -50,10 +50,10 @@ importers:
         version: 3.6.1(typescript@5.9.3)
       unplugin-macros:
         specifier: ^0.18.2
-        version: 0.18.2(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+        version: 0.18.2(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
       vitest:
         specifier: ^4.0.4
-        version: 4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+        version: 4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
 
 packages:
 
@@ -677,8 +677,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@24.9.1':
-    resolution: {integrity: sha512-QoiaXANRkSXK6p0Duvt56W208du4P9Uye9hWLWgGMDTEoKPhuenzNcC4vGUmrNkiOKTlIrBoyNQYNpSwfEZXSg==}
+  '@types/node@24.9.2':
+    resolution: {integrity: sha512-uWN8YqxXxqFMX2RqGOrumsKeti4LlmIMIyV0lgut4jx7KQBcBiW6vkDtIBvHnHIquwNfJhk8v2OtmO8zXWHfPA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2634,7 +2634,7 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@4.11.0(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))':
+  '@antfu/eslint-config@4.11.0(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))':
     dependencies:
       '@antfu/install-pkg': 1.0.0
       '@clack/prompts': 0.10.0
@@ -2643,7 +2643,7 @@ snapshots:
       '@stylistic/eslint-plugin': 4.2.0(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)
       '@typescript-eslint/eslint-plugin': 8.28.0(@typescript-eslint/parser@8.46.2(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)
       '@typescript-eslint/parser': 8.46.2(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)
-      '@vitest/eslint-plugin': 1.1.38(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))
+      '@vitest/eslint-plugin': 1.1.38(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))
       ansis: 3.17.0
       cac: 6.7.14
       eslint: 9.38.0(jiti@2.5.1)
@@ -3093,9 +3093,9 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.46.3':
     optional: true
 
-  '@ryoppippi/eslint-config@0.2.1(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))':
+  '@ryoppippi/eslint-config@0.2.1(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))':
     dependencies:
-      '@antfu/eslint-config': 4.11.0(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))
+      '@antfu/eslint-config': 4.11.0(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.2(eslint@9.38.0(jiti@2.5.1)))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))
       '@antfu/ni': 24.4.0
       defu: 6.1.4
       eslint: 9.38.0(jiti@2.5.1)
@@ -3171,7 +3171,7 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@24.9.1':
+  '@types/node@24.9.2':
     dependencies:
       undici-types: 7.16.0
 
@@ -3450,13 +3450,13 @@ snapshots:
   '@unrs/resolver-binding-win32-x64-msvc@1.3.2':
     optional: true
 
-  '@vitest/eslint-plugin@1.1.38(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))':
+  '@vitest/eslint-plugin@1.1.38(@typescript-eslint/utils@8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3))(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))':
     dependencies:
       '@typescript-eslint/utils': 8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)
       eslint: 9.38.0(jiti@2.5.1)
     optionalDependencies:
       typescript: 5.9.3
-      vitest: 4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+      vitest: 4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
 
   '@vitest/expect@4.0.5':
     dependencies:
@@ -3467,13 +3467,13 @@ snapshots:
       chai: 6.2.0
       tinyrainbow: 3.0.3
 
-  '@vitest/mocker@4.0.5(vite@7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))':
+  '@vitest/mocker@4.0.5(vite@7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))':
     dependencies:
       '@vitest/spy': 4.0.5
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+      vite: 7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
 
   '@vitest/pretty-format@4.0.5':
     dependencies:
@@ -4073,11 +4073,11 @@ snapshots:
 
   eslint-visitor-keys@4.2.1: {}
 
-  eslint-vitest-rule-tester@2.3.0(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)):
+  eslint-vitest-rule-tester@2.3.0(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)(vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)):
     dependencies:
       '@typescript-eslint/utils': 8.46.1(eslint@9.38.0(jiti@2.5.1))(typescript@5.9.3)
       eslint: 9.38.0(jiti@2.5.1)
-      vitest: 4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+      vitest: 4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -5285,13 +5285,13 @@ snapshots:
       unist-util-is: 6.0.0
       unist-util-visit-parents: 6.0.1
 
-  unplugin-macros@0.18.2(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0):
+  unplugin-macros@0.18.2(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0):
     dependencies:
       ast-kit: 2.1.2
       magic-string-ast: 1.0.2
       unplugin: 2.3.10
-      vite: 7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
-      vite-node: 3.2.4(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+      vite: 7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
+      vite-node: 3.2.4(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -5356,13 +5356,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-node@3.2.4(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0):
+  vite-node@3.2.4(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.1
       es-module-lexer: 1.7.0
       pathe: 2.0.3
-      vite: 7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+      vite: 7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -5377,7 +5377,7 @@ snapshots:
       - tsx
       - yaml
 
-  vite@7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0):
+  vite@7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.9
       fdir: 6.5.0(picomatch@4.0.3)
@@ -5386,15 +5386,15 @@ snapshots:
       rollup: 4.46.3
       tinyglobby: 0.2.15
     optionalDependencies:
-      '@types/node': 24.9.1
+      '@types/node': 24.9.2
       fsevents: 2.3.3
       jiti: 2.5.1
       yaml: 2.7.0
 
-  vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0):
+  vitest@4.0.5(@types/debug@4.1.12)(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 4.0.5
-      '@vitest/mocker': 4.0.5(vite@7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0))
+      '@vitest/mocker': 4.0.5(vite@7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0))
       '@vitest/pretty-format': 4.0.5
       '@vitest/runner': 4.0.5
       '@vitest/snapshot': 4.0.5
@@ -5411,11 +5411,11 @@ snapshots:
       tinyexec: 0.3.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.0.3
-      vite: 7.1.6(@types/node@24.9.1)(jiti@2.5.1)(yaml@2.7.0)
+      vite: 7.1.6(@types/node@24.9.2)(jiti@2.5.1)(yaml@2.7.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/debug': 4.1.12
-      '@types/node': 24.9.1
+      '@types/node': 24.9.2
     transitivePeerDependencies:
       - jiti
       - less
