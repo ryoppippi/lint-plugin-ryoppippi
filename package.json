@@ -59,6 +59,6 @@
 		"ufo": "^1.6.1",
 		"unbuild": "^3.6.1",
 		"unplugin-macros": "^0.18.3",
-		"vitest": "^4.0.12"
+		"vitest": "^4.0.13"
 	}
 }
