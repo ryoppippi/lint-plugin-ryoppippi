@@ -52,7 +52,7 @@
 		"@typescript-eslint/parser": "^8.48.1",
 		"@typescript-eslint/typescript-estree": "^8.48.1",
 		"eslint": "^9.39.1",
-		"eslint-plugin-format": "^1.0.2",
+		"eslint-plugin-format": "^1.1.0",
 		"eslint-vitest-rule-tester": "^3.0.0",
 		"publint": "^0.3.15",
 		"typescript": "^5.9.3",
