@@ -58,7 +58,7 @@
 		"typescript": "^5.9.3",
 		"ufo": "^1.6.3",
 		"unbuild": "^3.6.1",
-		"unplugin-macros": "^0.18.6",
+		"unplugin-macros": "^0.18.7",
 		"vitest": "^4.0.18"
 	}
 }
