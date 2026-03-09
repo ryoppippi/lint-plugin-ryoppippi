@@ -46,7 +46,7 @@
 		"@types/estree": "^1.0.8"
 	},
 	"devDependencies": {
-		"@antfu/ni": "^28.2.0",
+		"@antfu/ni": "^28.3.0",
 		"@ryoppippi/eslint-config": "^0.2.1",
 		"@types/node": "^25.3.5",
 		"@typescript-eslint/parser": "^8.56.1",
