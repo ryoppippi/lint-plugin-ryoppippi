@@ -7,13 +7,13 @@
 ### npm
 
 ```sh
-npm install --save-dev @ryoppippi/eslint-plugin
+pnpm install --D eslint-plugin-ryoppippi
 ```
 
 `eslint.config.js`
 
 ```ts
-import ryoppippi from '@ryoppippi/eslint-plugin';
+import ryoppippi from 'eslint-plugin-ryoppippi';
 
 export default [
 	...ryoppippi.configs['flat/recommended']
