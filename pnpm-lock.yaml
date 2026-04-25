@@ -13,8 +13,8 @@ importers:
         version: 1.0.8
     devDependencies:
       '@antfu/ni':
-        specifier: ^30.0.0
-        version: 30.0.0
+        specifier: ^30.1.0
+        version: 30.1.0
       '@ryoppippi/eslint-config':
         specifier: ^0.2.1
         version: 0.2.1(@typescript-eslint/utils@8.55.0(eslint@9.39.4(jiti@2.5.1))(typescript@6.0.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@2.0.1(eslint@9.39.4(jiti@2.5.1)))(eslint@9.39.4(jiti@2.5.1))(typescript@6.0.3)(vitest@4.1.5(@types/node@25.6.0)(vite@8.0.0(@types/node@25.6.0)(esbuild@0.27.2)(jiti@2.5.1)(yaml@2.7.0)))
@@ -113,8 +113,8 @@ packages:
     resolution: {integrity: sha512-ZjriRbGyWGSrBE1RY2qBIXyilejMWLDWh2Go2dqFottyiuOze36+BpPch2z2WnGEgEbzTBVPetMmQvt0xt+iww==}
     hasBin: true
 
-  '@antfu/ni@30.0.0':
-    resolution: {integrity: sha512-DqBVB3XqXH4VsDpER7iLlEtayMC98iXrY7kwBzp1v6LGc/6U6+qnN3+X0bcPK63LMXJCRG2D/XDq7dvtKDGogg==}
+  '@antfu/ni@30.1.0':
+    resolution: {integrity: sha512-3VuAbPjgY52rQNn4wABaXMhBU2Oq91uy6L8nX49eJ35OLI68CyckGU+HZxcaHix4ymuGM2nFL1D6sLpgODK5xw==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -3283,7 +3283,7 @@ snapshots:
       package-manager-detector: 1.6.0
       tinyexec: 1.0.4
 
-  '@antfu/ni@30.0.0':
+  '@antfu/ni@30.1.0':
     dependencies:
       fzf: 0.5.2
       package-manager-detector: 1.6.0
