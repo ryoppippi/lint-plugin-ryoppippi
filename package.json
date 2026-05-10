@@ -43,7 +43,7 @@
 		"eslint": "*"
 	},
 	"dependencies": {
-		"@types/estree": "^1.0.8"
+		"@types/estree": "^1.0.9"
 	},
 	"devDependencies": {
 		"@antfu/ni": "^30.1.0",
