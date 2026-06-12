@@ -50,7 +50,7 @@
 		"@ryoppippi/eslint-config": "^0.2.1",
 		"@types/node": "^25.9.2",
 		"@typescript-eslint/parser": "^8.61.0",
-		"@typescript-eslint/typescript-estree": "^8.60.1",
+		"@typescript-eslint/typescript-estree": "^8.61.0",
 		"eslint": "^9.39.4",
 		"eslint-plugin-format": "^2.0.1",
 		"eslint-vitest-rule-tester": "^3.1.0",
