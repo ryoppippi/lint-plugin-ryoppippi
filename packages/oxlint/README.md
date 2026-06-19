@@ -12,10 +12,10 @@ npm i -D oxlint oxlint-plugin-ryoppippi
 
 ```jsonc
 {
-  "jsPlugins": ["oxlint-plugin-ryoppippi"],
-  "rules": {
-    "ryoppippi/no-http-url": "error",
-    "ryoppippi/require-comment-on-useEffect": "error",
-  },
+	"jsPlugins": ["oxlint-plugin-ryoppippi"],
+	"rules": {
+		"ryoppippi/no-http-url": "error",
+		"ryoppippi/require-comment-on-useEffect": "error",
+	},
 }
 ```

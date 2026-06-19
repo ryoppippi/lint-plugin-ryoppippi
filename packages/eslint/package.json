@@ -1,53 +1,53 @@
 {
-  "name": "eslint-plugin-ryoppippi",
-  "version": "0.2.6",
-  "description": "Custom ESLint rules maintained by ryoppippi.",
-  "keywords": [
-    "eslint",
-    "eslint-plugin",
-    "ryoppippi"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryoppippi/lint-plugin-ryoppippi.git",
-    "directory": "packages/eslint"
-  },
-  "funding": "https://github.com/ryoppippi",
-  "files": [
-    "README.md",
-    "dist",
-    "package.json",
-    "src"
-  ],
-  "type": "module",
-  "sideEffects": false,
-  "exports": {
-    ".": "./dist/index.mjs",
-    "./package.json": "./package.json"
-  },
-  "scripts": {
-    "build": "vp pack",
-    "dev": "vp pack --watch",
-    "test": "vp test --run",
-    "typecheck": "vp check",
-    "prepack": "vp run build"
-  },
-  "dependencies": {
-    "@types/estree": "^1.0.9"
-  },
-  "devDependencies": {
-    "@types/node": "catalog:",
-    "@typescript-eslint/parser": "catalog:",
-    "@typescript-eslint/typescript-estree": "catalog:",
-    "eslint": "catalog:",
-    "eslint-vitest-rule-tester": "catalog:",
-    "publint": "catalog:",
-    "typescript": "catalog:",
-    "vite-plus": "catalog:",
-    "vitest": "catalog:"
-  },
-  "peerDependencies": {
-    "eslint": "^9.0.0"
-  }
+	"name": "eslint-plugin-ryoppippi",
+	"version": "0.2.6",
+	"description": "Custom ESLint rules maintained by ryoppippi.",
+	"keywords": [
+		"eslint",
+		"eslint-plugin",
+		"ryoppippi"
+	],
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ryoppippi/lint-plugin-ryoppippi.git",
+		"directory": "packages/eslint"
+	},
+	"funding": "https://github.com/ryoppippi",
+	"files": [
+		"README.md",
+		"dist",
+		"package.json",
+		"src"
+	],
+	"type": "module",
+	"sideEffects": false,
+	"exports": {
+		".": "./dist/index.mjs",
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"build": "vp pack",
+		"dev": "vp pack --watch",
+		"test": "vp test --run",
+		"typecheck": "vp check",
+		"prepack": "vp run build"
+	},
+	"dependencies": {
+		"@types/estree": "^1.0.9"
+	},
+	"devDependencies": {
+		"@types/node": "catalog:",
+		"@typescript-eslint/parser": "catalog:",
+		"@typescript-eslint/typescript-estree": "catalog:",
+		"eslint": "catalog:",
+		"eslint-vitest-rule-tester": "catalog:",
+		"publint": "catalog:",
+		"typescript": "catalog:",
+		"vite-plus": "catalog:",
+		"vitest": "catalog:"
+	},
+	"peerDependencies": {
+		"eslint": "^9.0.0"
+	}
 }

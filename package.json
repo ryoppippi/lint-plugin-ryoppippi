@@ -1,21 +1,21 @@
 {
-  "name": "lint-plugin-ryoppippi",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "check": "vp run -r build && vp fmt --check && vp lint",
-    "format": "vp fmt",
-    "lint": "vp lint",
-    "test": "vp run -r test",
-    "typecheck": "vp run -r typecheck",
-    "build": "vp run -r build"
-  },
-  "devDependencies": {
-    "pkg-pr-new": "0.0.75",
-    "vite-plus": "catalog:"
-  },
-  "engines": {
-    "node": "22.18.0"
-  },
-  "packageManager": "pnpm@10.34.3"
+	"name": "lint-plugin-ryoppippi",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"check": "vp run -r build && vp fmt --check && vp lint",
+		"format": "vp fmt",
+		"lint": "vp lint",
+		"test": "vp run -r test",
+		"typecheck": "vp run -r typecheck",
+		"build": "vp run -r build"
+	},
+	"devDependencies": {
+		"pkg-pr-new": "0.0.75",
+		"vite-plus": "catalog:"
+	},
+	"engines": {
+		"node": "22.18.0"
+	},
+	"packageManager": "pnpm@10.34.3"
 }

@@ -11,7 +11,7 @@ const someValue = 1;
 
 // prints the value of `someValue` whenever it changes
 useEffect(() => {
-  console.log(someValue);
+	console.log(someValue);
 }, [someValue]);
 ```
 
@@ -20,7 +20,7 @@ useEffect(() => {
 
 const someValue = 1;
 useEffect(() => {
-  console.log(someValue);
+	console.log(someValue);
 }, [someValue]);
 ```
 
