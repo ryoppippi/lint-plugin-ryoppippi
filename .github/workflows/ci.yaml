@@ -30,4 +30,4 @@ jobs:
         with:
           github_access_token: ${{ github.token }}
       - run: nix develop --command vp install --frozen-lockfile
-      - run: nix develop --command vp dlx pkg-pr-new publish --pnpm
+      - run: nix develop --command vp exec pkg-pr-new publish './packages/*' --pnpm
