@@ -4,7 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-vite-plus.url = "github:ryoppippi/nix-vite-plus";
-    nix-vite-plus.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
