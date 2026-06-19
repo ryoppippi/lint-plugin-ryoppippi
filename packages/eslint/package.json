@@ -34,7 +34,7 @@
     "prepack": "vp run build"
   },
   "dependencies": {
-    "@types/estree": "^1.0.8"
+    "@types/estree": "^1.0.9"
   },
   "devDependencies": {
     "@types/node": "catalog:",
