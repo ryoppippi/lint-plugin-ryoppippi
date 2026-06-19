@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "check": "vp fmt --check && vp lint",
+    "check": "vp run -r build && vp fmt --check && vp lint",
     "format": "vp fmt",
     "lint": "vp lint",
     "test": "vp run -r test",
