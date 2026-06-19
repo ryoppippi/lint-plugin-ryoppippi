@@ -29,7 +29,10 @@
         in
         {
           default = pkgs.mkShellNoCC {
-            packages = [ nix-vite-plus.packages.${system}.vp ];
+            packages = [
+              nix-vite-plus.packages.${system}.vp
+              pkgs.yq-go
+            ];
           };
         }
       );
