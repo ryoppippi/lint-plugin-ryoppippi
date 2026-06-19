@@ -19,6 +19,8 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
+      nodeVersion = nixpkgs.lib.removeSuffix "\n" (builtins.readFile ./.node-version);
+      nodeMajor = nixpkgs.lib.versions.major nodeVersion;
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
@@ -26,10 +28,12 @@
         system:
         let
           pkgs = import nixpkgs { inherit system; };
+          nodejs = pkgs.${"nodejs_${nodeMajor}"};
         in
         {
           default = pkgs.mkShellNoCC {
             packages = [
+              nodejs
               nix-vite-plus.packages.${system}.vp
               pkgs.yq-go
             ];
