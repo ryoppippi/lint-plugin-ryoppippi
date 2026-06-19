@@ -1,21 +1,27 @@
-# eslint-plugin-ryoppippi
+# lint-plugin-ryoppippi
 
-[Rules List](./src/rules)
+Lint plugins maintained by ryoppippi.
 
-## Install
+## Packages
 
-### npm
+- [`eslint-plugin-ryoppippi`](./packages/eslint)
+- [`oxlint-plugin-ryoppippi`](./packages/oxlint)
+
+## Development
+
+Enter the Nix development environment directly or allow direnv:
 
 ```sh
-pnpm install --D eslint-plugin-ryoppippi
+nix develop
+direnv allow
 ```
 
-`eslint.config.js`
+Install dependencies and run all checks with Vite+:
 
-```ts
-import ryoppippi from 'eslint-plugin-ryoppippi';
-
-export default [
-	...ryoppippi.configs['flat/recommended']
-];
+```sh
+vp install
+vp run check
+vp run -r typecheck
+vp run -r build
+vp run -r test
 ```

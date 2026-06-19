@@ -1,64 +1,20 @@
 {
-	"name": "eslint-plugin-ryoppippi",
-	"type": "module",
-	"version": "0.2.6",
-	"packageManager": "pnpm@10.33.0",
-	"description": "",
-	"author": "",
-	"license": "MIT",
-	"funding": "https://github.com/ryoppippi",
-	"repository": "https://github.com/ryoppippi/eslint-plugin-ryoppippi",
-	"keywords": [
-		"eslint",
-		"eslint-plugin",
-		"ryoppippi"
-	],
-	"sideEffects": false,
-	"exports": {
-		".": {
-			"types": "./dist/index.d.mts",
-			"import": "./dist/index.mjs"
-		},
-		"./package.json": "./package.json"
-	},
-	"files": [
-		"LICENSE",
-		"README.md",
-		"dist",
-		"package.json",
-		"src"
-	],
-	"scripts": {
-		"build": "unbuild",
-		"dev": "unbuild --stub",
-		"test": "vitest",
-		"lint": "eslint .",
-		"format": "eslint . --fix",
-		"typecheck": "tsc --noEmit",
-		"prepack": "nr build",
-		"release": "nr lint && nr typecheck && nr build && publint && nlx bumpp && nr release:npm",
-		"release:npm": "pnpm publish"
-	},
-	"peerDependencies": {
-		"eslint": "*"
-	},
-	"dependencies": {
-		"@types/estree": "^1.0.8"
-	},
-	"devDependencies": {
-		"@antfu/ni": "^30.0.0",
-		"@ryoppippi/eslint-config": "^0.2.1",
-		"@types/node": "^25.5.2",
-		"@typescript-eslint/parser": "^8.58.1",
-		"@typescript-eslint/typescript-estree": "^8.58.1",
-		"eslint": "^9.39.4",
-		"eslint-plugin-format": "^2.0.1",
-		"eslint-vitest-rule-tester": "^3.1.0",
-		"publint": "^0.3.18",
-		"typescript": "^6.0.2",
-		"ufo": "^1.6.3",
-		"unbuild": "^3.6.1",
-		"unplugin-macros": "^0.19.1",
-		"vitest": "^4.1.4"
-	}
+  "name": "lint-plugin-ryoppippi",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "vp fmt --check && vp lint",
+    "format": "vp fmt",
+    "lint": "vp lint",
+    "test": "vp run -r test",
+    "typecheck": "vp run -r typecheck",
+    "build": "vp run -r build"
+  },
+  "devDependencies": {
+    "vite-plus": "catalog:"
+  },
+  "engines": {
+    "node": "22.14.0"
+  },
+  "packageManager": "pnpm@10.33.0"
 }

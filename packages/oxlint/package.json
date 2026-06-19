@@ -1,0 +1,55 @@
+{
+  "name": "oxlint-plugin-ryoppippi",
+  "version": "0.1.0",
+  "description": "Oxlint JavaScript plugin for ryoppippi's custom lint rules.",
+  "keywords": [
+    "oxlint",
+    "oxlint-plugin",
+    "ryoppippi"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryoppippi/lint-plugin-ryoppippi.git",
+    "directory": "packages/oxlint"
+  },
+  "funding": "https://github.com/ryoppippi",
+  "files": [
+    "README.md",
+    "dist",
+    "package.json",
+    "src"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "pretest": "vp run build",
+    "test": "vp test --run",
+    "typecheck": "vp check",
+    "prepack": "vp run build"
+  },
+  "dependencies": {
+    "eslint-plugin-ryoppippi": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "oxlint": "catalog:",
+    "typescript": "catalog:",
+    "vite-plus": "catalog:",
+    "vitest": "catalog:"
+  },
+  "peerDependencies": {
+    "oxlint": ">=1.70.0"
+  },
+  "peerDependenciesMeta": {
+    "oxlint": {
+      "optional": true
+    }
+  }
+}
