@@ -4,7 +4,7 @@ import { run as _run } from "eslint-vitest-rule-tester";
 
 export async function run(options: TestCasesOptions & RuleTesterInitOptions): Promise<void> {
   await _run({
-    parser: tsParser,
     ...options,
+    parser: tsParser,
   });
 }

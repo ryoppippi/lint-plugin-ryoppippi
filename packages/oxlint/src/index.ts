@@ -9,12 +9,17 @@ export interface OxlintPlugin {
   rules: Readonly<Record<string, object>>;
 }
 
+const rules = eslintPlugin.rules;
+if (rules == null || Object.keys(rules).length === 0) {
+  throw new Error("eslint-plugin-ryoppippi did not expose any rules");
+}
+
 const plugin: OxlintPlugin = {
   meta: {
     name: "oxlint-plugin-ryoppippi",
     version: packageJson.version,
   },
-  rules: eslintPlugin.rules ?? {},
+  rules,
 };
 
 export default plugin;

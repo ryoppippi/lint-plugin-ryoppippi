@@ -8,12 +8,22 @@ useEffect(() => {
   console.log('Hello, useEffect!');
 }, []);
 `,
+  `
+// display log after rendering
+React.useEffect(() => {
+  console.log('Hello, React.useEffect!');
+}, []);
+`,
 ];
 
 const invalids = [
   `
 useEffect(() => {
   console.log('Hello, useEffect!');
+}, []);`,
+  `
+React.useEffect(() => {
+  console.log('Hello, React.useEffect!');
 }, []);`,
 ];
 

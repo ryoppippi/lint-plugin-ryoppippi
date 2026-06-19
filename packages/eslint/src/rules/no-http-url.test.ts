@@ -22,6 +22,10 @@ const valid = [
     code: `'http://custom.com'`,
     options: [{ allowedOrigins: ["custom.com"] }],
   },
+  {
+    code: `'http://a.b'`,
+    options: [{ allowedOrigins: ["a.b"] }],
+  },
 ];
 
 const invalid = [
@@ -85,6 +89,17 @@ const invalid = [
     code: `'http://notallowed.com'`,
     output: `'https://notallowed.com'`,
     options: [{ allowedOrigins: ["custom.com"] }],
+    errors: [{ messageId: "httpNotAllowed" }],
+  },
+  {
+    code: `'http://notlocalhost-evil.com'`,
+    output: `'https://notlocalhost-evil.com'`,
+    errors: [{ messageId: "httpNotAllowed" }],
+  },
+  {
+    code: `'http://aXb'`,
+    output: `'https://aXb'`,
+    options: [{ allowedOrigins: ["a.b"] }],
     errors: [{ messageId: "httpNotAllowed" }],
   },
 ];

@@ -19,7 +19,7 @@ direnv allow
 Install dependencies and run all checks with Vite+:
 
 ```sh
-vp install
+vp install --frozen-lockfile
 vp run check
 vp run -r typecheck
 vp run -r build

@@ -65,6 +65,11 @@ function runOxlint(cwd: string, ...arguments_: string[]) {
       "input.js",
       ...arguments_,
     ],
-    { cwd, encoding: "utf8" },
+    {
+      cwd,
+      encoding: "utf8",
+      killSignal: "SIGKILL",
+      timeout: 30_000,
+    },
   );
 }

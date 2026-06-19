@@ -9,8 +9,8 @@ export const MESSAGE_ID = `httpNotAllowed`;
  */
 const DEFAULT_ALLOWED_ORIGIN = ["localhost", "127.0.0.1"] as const;
 
-// Top-level regex definitions
-const URL_REGEXP = /http:\/\//gi;
+const HTTP_PROTOCOL_REGEXP = /http:\/\//gi;
+const HTTP_URL_REGEXP = /http:\/\/[^\s"'`<>]+/gi;
 
 const rule = {
   meta: {
@@ -42,20 +42,26 @@ const rule = {
   create: (context) => {
     const options = (context.options.at(0) ?? {}) as { allowedOrigins?: readonly string[] };
     const allowedOrigins = options?.allowedOrigins ?? DEFAULT_ALLOWED_ORIGIN;
-    const LOCAL_REGEXP = new RegExp(allowedOrigins.join("|"), "gi");
+    const allowedHostnames = new Set(allowedOrigins.map((origin) => origin.toLowerCase()));
+
+    const containsDisallowedHttpUrl = (value: string): boolean => {
+      for (const match of value.matchAll(HTTP_URL_REGEXP)) {
+        try {
+          if (!allowedHostnames.has(new URL(match[0]).hostname.toLowerCase())) {
+            return true;
+          }
+        } catch {
+          return true;
+        }
+      }
+      return false;
+    };
 
     /**
      * Check whether the URL is HTTP and fix it to HTTPS.
      */
     const checkHttpUrl = (node: Rule.Node, value: string, raw: string | null | undefined): void => {
-      if (
-        value != null &&
-        typeof value === "string" &&
-        // eslint-disable-next-line ts/strict-boolean-expressions
-        value.match(URL_REGEXP) &&
-        // eslint-disable-next-line ts/strict-boolean-expressions
-        !value.match(LOCAL_REGEXP)
-      ) {
+      if (value != null && typeof value === "string" && containsDisallowedHttpUrl(value)) {
         context.report({
           node,
           messageId: MESSAGE_ID,
@@ -63,7 +69,7 @@ const rule = {
             if (raw == null) {
               return null;
             }
-            const result = raw.replace(URL_REGEXP, "https://");
+            const result = raw.replace(HTTP_PROTOCOL_REGEXP, "https://");
             return fixer.replaceText(node, result);
           },
         });
@@ -84,17 +90,12 @@ const rule = {
         const fullText = sourceCode.getText(node);
         const value = node.quasis.map((q) => q.value.cooked).join("");
 
-        if (
-          // eslint-disable-next-line ts/strict-boolean-expressions
-          value.match(URL_REGEXP) &&
-          // eslint-disable-next-line ts/strict-boolean-expressions
-          !value.match(LOCAL_REGEXP)
-        ) {
+        if (containsDisallowedHttpUrl(value)) {
           context.report({
             node,
             messageId: MESSAGE_ID,
             fix(fixer) {
-              const newText = fullText.replace(URL_REGEXP, "https://");
+              const newText = fullText.replace(HTTP_PROTOCOL_REGEXP, "https://");
               return fixer.replaceText(node, newText);
             },
           });

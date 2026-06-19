@@ -15,7 +15,7 @@ const rule = {
     },
     schema: [],
     messages: {
-      requireCommentOnUseEffect: `Comments are required for useEffect.
+      [MESSAGE_ID]: `Comments are required for useEffect.
 useEffect is an escape hatch from the React paradigm, so you need a reason to use it (it should be avoided if possible).
 Please write in comments "what you want to do", "why you use useEffect", and "when it is called" for useEffect.
 // What: The process that ~
@@ -46,7 +46,7 @@ References:
           if (comments.length === 0) {
             context.report({
               node,
-              messageId: "requireCommentOnUseEffect",
+              messageId: MESSAGE_ID,
             });
           }
         }
@@ -63,7 +63,7 @@ References:
             if (comments.length === 0) {
               context.report({
                 node,
-                messageId: "requireCommentOnUseEffect",
+                messageId: MESSAGE_ID,
               });
             }
           }

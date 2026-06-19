@@ -5,7 +5,7 @@ Oxlint JavaScript plugin for ryoppippi's custom lint rules.
 ## Install
 
 ```sh
-vp add -D oxlint oxlint-plugin-ryoppippi
+npm i -D oxlint oxlint-plugin-ryoppippi
 ```
 
 ## Configure

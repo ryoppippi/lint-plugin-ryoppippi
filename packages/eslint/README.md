@@ -7,7 +7,7 @@
 ### npm
 
 ```sh
-vp add -D eslint-plugin-ryoppippi
+npm i -D eslint-plugin-ryoppippi
 ```
 
 `eslint.config.js`
