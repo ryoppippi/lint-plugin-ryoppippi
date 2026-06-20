@@ -1,7 +1,7 @@
 import { spawnSync } from "node:child_process";
 import { resolve } from "node:path";
 import { createFixture } from "fs-fixture";
-import plugin from "../src/index.ts";
+import plugin from "./index.ts";
 
 it("exports both ryoppippi rules", () => {
 	expect(plugin.meta?.name).toBe("oxlint-plugin-ryoppippi");
