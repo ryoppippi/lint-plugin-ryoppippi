@@ -43,7 +43,7 @@ if (import.meta.vitest) {
 	it("reports missing useEffect comments through Oxlint", async () => {
 		await using fixture = await createOxlintFixture("useEffect(() => {}, []);\n");
 		const result = runOxlint(fixture.path);
-		const output = `${result.stdout}${result.stderr}`;
+		const output = `${result.stdout}${result.stderr}`.replaceAll("%25", "%");
 
 		expect(result.status).toBe(1);
 		expect(output).toContain("ryoppippi(require-comment-on-useEffect)");
