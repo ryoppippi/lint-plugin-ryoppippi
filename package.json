@@ -3,19 +3,15 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"check": "vp run -r build && vp fmt --check && vp lint",
+		"check": "vp run -r build && vp check",
 		"format": "vp fmt",
 		"lint": "vp lint",
 		"test": "vp run -r test",
-		"typecheck": "vp run -r typecheck",
 		"build": "vp run -r build"
 	},
 	"devDependencies": {
 		"pkg-pr-new": "0.0.75",
 		"vite-plus": "catalog:"
-	},
-	"engines": {
-		"node": "22.18.0"
 	},
 	"packageManager": "pnpm@11.7.0"
 }
