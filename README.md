@@ -21,7 +21,6 @@ Install dependencies and run all checks with Vite+:
 ```sh
 vp install --frozen-lockfile
 vp run check
-vp run -r typecheck
-vp run -r build
-vp run -r test
+vp run build
+vp run test
 ```

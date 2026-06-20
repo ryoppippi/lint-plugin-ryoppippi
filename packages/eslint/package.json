@@ -44,6 +44,7 @@
 		"eslint-vitest-rule-tester": "catalog:",
 		"publint": "catalog:",
 		"typescript": "catalog:",
+		"unplugin-unused": "catalog:",
 		"vite-plus": "catalog:",
 		"vitest": "catalog:"
 	},

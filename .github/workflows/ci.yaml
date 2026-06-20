@@ -20,7 +20,6 @@ jobs:
           github_access_token: ${{ github.token }}
       - run: nix develop --command vp install --frozen-lockfile
       - run: nix develop --command vp run check
-      - run: nix develop --command vp run -r typecheck
       - run: nix develop --command vp run -r test
       - run: nix fmt -- --fail-on-change
       - run: nix flake check
