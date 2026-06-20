@@ -6,7 +6,7 @@
 		"check": "vp run -r build && vp check",
 		"format": "vp fmt",
 		"lint": "vp lint",
-		"test": "vp run -r test",
+		"test": "vp run -r build && vp test run",
 		"build": "vp run -r build"
 	},
 	"devDependencies": {
