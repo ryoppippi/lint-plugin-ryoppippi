@@ -1,5 +1,5 @@
-import type { Rule } from 'eslint';
-import { docUrl } from '../utils' with {type: 'macro'};
+import type { Rule } from "eslint";
+import { docUrl } from "../utils";
 
 export const RULE_NAME = `no-http-url`;
 export const MESSAGE_ID = `httpNotAllowed`;
@@ -7,26 +7,26 @@ export const MESSAGE_ID = `httpNotAllowed`;
 /**
  * Default allowed origins for HTTP URLs.
  */
-const DEFAULT_ALLOWED_ORIGIN = ['localhost', '127.0.0.1'] as const;
+const DEFAULT_ALLOWED_ORIGIN = ["localhost", "127.0.0.1"] as const;
 
-// Top-level regex definitions
-const URL_REGEXP = /http:\/\//gi;
+const HTTP_PROTOCOL_REGEXP = /http:\/\//gi;
+const HTTP_URL_REGEXP = /http:\/\/[^\s"'`<>]+/gi;
 
-const rule = ({
+const rule = {
 	meta: {
-		type: 'problem',
+		type: "problem",
 		docs: {
-			description: 'disallow http url',
-			url: docUrl('no-http-url'),
+			description: "disallow http url",
+			url: docUrl("no-http-url"),
 		},
 		schema: [
 			{
-				type: 'object',
+				type: "object",
 				properties: {
 					allowedOrigins: {
-						type: 'array',
+						type: "array",
 						items: {
-							type: 'string',
+							type: "string",
 						},
 						default: DEFAULT_ALLOWED_ORIGIN,
 					},
@@ -34,28 +34,34 @@ const rule = ({
 				additionalProperties: false,
 			},
 		],
-		fixable: 'code',
+		fixable: "code",
 		messages: {
-			[MESSAGE_ID]: 'HTTP is not safe enough. use HTTPS.',
+			[MESSAGE_ID]: "HTTP is not safe enough. use HTTPS.",
 		},
 	},
 	create: (context) => {
 		const options = (context.options.at(0) ?? {}) as { allowedOrigins?: readonly string[] };
 		const allowedOrigins = options?.allowedOrigins ?? DEFAULT_ALLOWED_ORIGIN;
-		const LOCAL_REGEXP = new RegExp(allowedOrigins.join('|'), 'gi');
+		const allowedHostnames = new Set(allowedOrigins.map((origin) => origin.toLowerCase()));
+
+		const containsDisallowedHttpUrl = (value: string): boolean => {
+			for (const match of value.matchAll(HTTP_URL_REGEXP)) {
+				try {
+					if (!allowedHostnames.has(new URL(match[0]).hostname.toLowerCase())) {
+						return true;
+					}
+				} catch {
+					return true;
+				}
+			}
+			return false;
+		};
 
 		/**
 		 * Check whether the URL is HTTP and fix it to HTTPS.
 		 */
 		const checkHttpUrl = (node: Rule.Node, value: string, raw: string | null | undefined): void => {
-			if (
-				value != null
-				&& typeof value === 'string'
-				// eslint-disable-next-line ts/strict-boolean-expressions
-				&& value.match(URL_REGEXP)
-				// eslint-disable-next-line ts/strict-boolean-expressions
-				&& !value.match(LOCAL_REGEXP)
-			) {
+			if (value != null && typeof value === "string" && containsDisallowedHttpUrl(value)) {
 				context.report({
 					node,
 					messageId: MESSAGE_ID,
@@ -63,7 +69,7 @@ const rule = ({
 						if (raw == null) {
 							return null;
 						}
-						const result = raw.replace(URL_REGEXP, 'https://');
+						const result = raw.replace(HTTP_PROTOCOL_REGEXP, "https://");
 						return fixer.replaceText(node, result);
 					},
 				});
@@ -74,7 +80,7 @@ const rule = ({
 			Literal: (node) => {
 				const token = context.sourceCode.getFirstToken(node);
 
-				if (token != null && token.type === 'String' && typeof node.value === 'string') {
+				if (token != null && token.type === "String" && typeof node.value === "string") {
 					checkHttpUrl(node, node.value, node.raw);
 				}
 			},
@@ -82,19 +88,14 @@ const rule = ({
 				// Handle template literals correctly, keeping all quasi and expression parts
 				const sourceCode = context.sourceCode;
 				const fullText = sourceCode.getText(node);
-				const value = node.quasis.map(q => q.value.cooked).join('');
+				const value = node.quasis.map((q) => q.value.cooked).join("");
 
-				if (
-					// eslint-disable-next-line ts/strict-boolean-expressions
-					value.match(URL_REGEXP)
-					// eslint-disable-next-line ts/strict-boolean-expressions
-					&& !value.match(LOCAL_REGEXP)
-				) {
+				if (containsDisallowedHttpUrl(value)) {
 					context.report({
 						node,
 						messageId: MESSAGE_ID,
 						fix(fixer) {
-							const newText = fullText.replace(URL_REGEXP, 'https://');
+							const newText = fullText.replace(HTTP_PROTOCOL_REGEXP, "https://");
 							return fixer.replaceText(node, newText);
 						},
 					});
@@ -102,6 +103,6 @@ const rule = ({
 			},
 		};
 	},
-}) as const satisfies Rule.RuleModule;
+} as const satisfies Rule.RuleModule;
 
 export default rule;

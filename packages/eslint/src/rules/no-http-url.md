@@ -7,15 +7,15 @@ This rule aims to ensure that all URLs are HTTPS.
 ## Rule Details
 
 ```ts
-'https://example.com'; // 👍 ok
+"https://example.com"; // 👍 ok
 
-'http://localhost'; // 👍 ok
+"http://localhost"; // 👍 ok
 
-'http:127.0.0.1:3000'; // 👍 ok
+"http:127.0.0.1:3000"; // 👍 ok
 ```
 
 ```ts
-'http://example.com'; // 👎 error
+"http://example.com"; // 👎 error
 ```
 
 ## Options
@@ -27,7 +27,7 @@ This rule accepts an optional configuration object with an `allowedOrigins` arra
 ```ts
 // eslint no-http-url: ["error", { "allowedOrigins": ["custom.com"] }]
 
-'http://custom.com'; // 👍 ok
+"http://custom.com"; // 👍 ok
 
-'http://example.com'; // 👎 error
+"http://example.com"; // 👎 error
 ```
