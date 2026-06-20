@@ -12,6 +12,7 @@ export default defineConfig({
 			},
 		},
 		publint: true,
+		unbundle: true,
 		unused: {
 			ignore: {
 				peerDependencies: ["oxlint"],
