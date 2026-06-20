@@ -43,9 +43,15 @@ if (import.meta.vitest) {
 	it("reports missing useEffect comments through Oxlint", async () => {
 		await using fixture = await createOxlintFixture("useEffect(() => {}, []);\n");
 		const result = runOxlint(fixture.path);
+		const output = `${result.stdout}${result.stderr}`;
 
 		expect(result.status).toBe(1);
-		expect(`${result.stdout}${result.stderr}`).toContain("ryoppippi(require-comment-on-useEffect)");
+		expect(output).toContain("ryoppippi(require-comment-on-useEffect)");
+		expect(output).toContain("https://react.dev/learn/you-might-not-need-an-effect");
+		expect(output).toContain("https://www.pandanoir.info/entry/2025/01/29/205439");
+		expect(output).toContain(
+			"https://jisou-programmer.beproud.jp/%E9%96%A2%E6%95%B0%E8%A8%AD%E8%A8%88/10-%E3%82%B3%E3%83%A1%E3%83%B3%E3%83%88%E3%81%AB%E3%81%AF%E3%80%8C%E3%81%AA%E3%81%9C%E3%80%8D%E3%82%92%E6%9B%B8%E3%81%8F.html",
+		);
 	});
 
 	it("fixes insecure HTTP URLs through Oxlint", async () => {
