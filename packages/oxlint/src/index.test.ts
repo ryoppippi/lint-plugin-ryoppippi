@@ -28,7 +28,7 @@ function createOxlintFixture(source: string) {
 	return createFixture({
 		".oxlintrc.json": JSON.stringify({
 			categories: { correctness: "off" },
-			jsPlugins: [resolve("dist/index.mjs")],
+			jsPlugins: [resolve(import.meta.dirname, "../dist/index.mjs")],
 			rules: {
 				"ryoppippi/no-http-url": "error",
 				"ryoppippi/require-comment-on-useEffect": "error",
@@ -42,7 +42,7 @@ function runOxlint(cwd: string, ...arguments_: string[]) {
 	return spawnSync(
 		process.execPath,
 		[
-			resolve("node_modules/oxlint/bin/oxlint"),
+			resolve(import.meta.dirname, "../node_modules/oxlint/bin/oxlint"),
 			"--config",
 			".oxlintrc.json",
 			"input.js",
