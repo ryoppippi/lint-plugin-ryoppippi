@@ -7,7 +7,7 @@
 		"allowImportingTsExtensions": true,
 		"noEmit": true,
 		"resolveJsonModule": true,
-		"types": ["vitest/globals"],
+		"types": ["vitest/importMeta"],
 		"strict": true,
 		"strictNullChecks": true,
 		"esModuleInterop": true,

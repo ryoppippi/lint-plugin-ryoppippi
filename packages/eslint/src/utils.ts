@@ -3,5 +3,15 @@ import { version } from "../package.json" with { type: "json" };
 const BASE_URL = `https://github.com/ryoppippi/lint-plugin-ryoppippi/tree/v${version}/packages/eslint/src/rules`;
 
 export function docUrl(ruleName: string): string {
-	return `${BASE_URL}/${ruleName}.md`;
+	return `${BASE_URL}/${ruleName}.ts`;
+}
+
+if (import.meta.vitest) {
+	const { expect, it } = import.meta.vitest;
+
+	it("links rule documentation in the monorepo", () => {
+		expect(docUrl("no-http-url")).toBe(
+			`https://github.com/ryoppippi/lint-plugin-ryoppippi/tree/v${version}/packages/eslint/src/rules/no-http-url.ts`,
+		);
+	});
 }

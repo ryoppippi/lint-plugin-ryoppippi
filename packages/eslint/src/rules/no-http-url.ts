@@ -1,3 +1,38 @@
+/**
+ * # no-http-url
+ *
+ * This rule aims to ensure that all URLs are HTTPS.
+ *
+ * `localhost` is allowed.
+ *
+ * ## Rule Details
+ *
+ * ```ts
+ * "https://example.com"; // 👍 ok
+ *
+ * "http://localhost"; // 👍 ok
+ *
+ * "http:127.0.0.1:3000"; // 👍 ok
+ * ```
+ *
+ * ```ts
+ * "http://example.com"; // 👎 error
+ * ```
+ *
+ * ## Options
+ *
+ * This rule accepts an optional configuration object with an `allowedOrigins` array. The default value for `allowedOrigins` is `['localhost', '127.0.0.1']`.
+ *
+ * ### Example
+ *
+ * ```ts
+ * // eslint no-http-url: ["error", { "allowedOrigins": ["custom.com"] }]
+ *
+ * "http://custom.com"; // 👍 ok
+ *
+ * "http://example.com"; // 👎 error
+ * ```
+ */
 import type { Rule } from "eslint";
 import { docUrl } from "../utils";
 
@@ -106,3 +141,109 @@ const rule = {
 } as const satisfies Rule.RuleModule;
 
 export default rule;
+
+if (import.meta.vitest) {
+	const { run } = await import("./_test");
+	const valid = [
+		`'https'`,
+		`'http'`,
+		`'//github.com'`,
+		`'https://github.com'`,
+		"`https://github.com`",
+		`"https://github.com"`,
+		`'&url=https://github.com'`,
+		`'http://localhost'`,
+		`'http://localhost:8080'`,
+		`'http://127.0.0.1'`,
+		`'http://127.0.0.1:30'`,
+		"`http://localhost`",
+		`"http://localhost"`,
+		"`\nhttp://localhost\n`",
+		"`my profile url is https://example.com/ryoppippi`",
+		{
+			code: `'http://custom.com'`,
+			options: [{ allowedOrigins: ["custom.com"] }],
+		},
+		{
+			code: `'http://a.b'`,
+			options: [{ allowedOrigins: ["a.b"] }],
+		},
+	];
+	const invalid = [
+		{
+			code: `'http://github.com'`,
+			output: `'https://github.com'`,
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: `"http://github.com"`,
+			output: `"https://github.com"`,
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: `"http://github.com http://ryoppippi.com"`,
+			output: `"https://github.com https://ryoppippi.com"`,
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: "`http://github.com`",
+			output: "`https://github.com`",
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: "`\nhttp://github.com/ryoppippi\n`",
+			output: "`\nhttps://github.com/ryoppippi\n`",
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: "`http://example.com/ryoppippi http://example.com/ryoppippi-2 https://example.com/ryoppippi`",
+			output:
+				"`https://example.com/ryoppippi https://example.com/ryoppippi-2 https://example.com/ryoppippi`",
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: "`my profile url is http://example.com/ryoppippi`",
+			output: "`my profile url is https://example.com/ryoppippi`",
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: "`http://github.com/ryoppippi/${path}`",
+			output: "`https://github.com/ryoppippi/${path}`",
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: "`http://github.com/ryoppippi/${path}/${path2}`",
+			output: "`https://github.com/ryoppippi/${path}/${path2}`",
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: `'&url=http://github.com'`,
+			output: `'&url=https://github.com'`,
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: `'http://notallowed.com'`,
+			output: `'https://notallowed.com'`,
+			options: [{ allowedOrigins: ["custom.com"] }],
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: `'http://notlocalhost-evil.com'`,
+			output: `'https://notlocalhost-evil.com'`,
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+		{
+			code: `'http://aXb'`,
+			output: `'https://aXb'`,
+			options: [{ allowedOrigins: ["a.b"] }],
+			errors: [{ messageId: MESSAGE_ID }],
+		},
+	];
+
+	await run({
+		name: RULE_NAME,
+		rule,
+		valid,
+		invalid,
+	});
+}

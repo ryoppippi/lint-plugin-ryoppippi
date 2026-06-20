@@ -4,6 +4,13 @@ export default defineConfig({
 	pack: {
 		dts: true,
 		exports: true,
+		inputOptions: {
+			transform: {
+				define: {
+					"import.meta.vitest": "undefined",
+				},
+			},
+		},
 		publint: true,
 		unused: {
 			ignore: {
@@ -13,6 +20,6 @@ export default defineConfig({
 		},
 	},
 	test: {
-		globals: true,
+		includeSource: ["src/**/*.ts"],
 	},
 });
