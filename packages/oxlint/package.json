@@ -40,7 +40,9 @@
 	"devDependencies": {
 		"@types/node": "catalog:",
 		"oxlint": "catalog:",
+		"publint": "catalog:",
 		"typescript": "catalog:",
+		"unplugin-unused": "catalog:",
 		"vite-plus": "catalog:",
 		"vitest": "catalog:"
 	},
