@@ -39,6 +39,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "catalog:",
+		"fs-fixture": "catalog:",
 		"oxlint": "catalog:",
 		"publint": "catalog:",
 		"typescript": "catalog:",

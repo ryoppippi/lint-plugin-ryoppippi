@@ -21,6 +21,9 @@ catalogs:
     eslint-vitest-rule-tester:
       specifier: ^3.1.0
       version: 3.1.0
+    fs-fixture:
+      specifier: ^2.14.0
+      version: 2.14.0
     oxlint:
       specifier: 1.70.0
       version: 1.70.0
@@ -97,6 +100,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.4
+      fs-fixture:
+        specifier: 'catalog:'
+        version: 2.14.0
       oxlint:
         specifier: 'catalog:'
         version: 1.70.0(oxlint-tsgolint@0.23.0)(vite-plus@0.2.1(@types/node@25.9.4)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@25.9.4)))
@@ -1014,6 +1020,10 @@ packages:
 
   flatted@3.4.2:
     resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
+
+  fs-fixture@2.14.0:
+    resolution: {integrity: sha512-lZBaSOewY5snBSyOjn3fmo2ES5gOR7Q1Y6dILH0/xR0xejjUhux65OGaFWhQ+jiyvTi5HOHqXQrQ9v48Lsmqbw==}
+    engines: {node: '>=18.0.0'}
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -2169,6 +2179,8 @@ snapshots:
       keyv: 4.5.4
 
   flatted@3.4.2: {}
+
+  fs-fixture@2.14.0: {}
 
   fsevents@2.3.3:
     optional: true
