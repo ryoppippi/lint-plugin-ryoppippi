@@ -48,6 +48,6 @@
 		"vitest": "catalog:"
 	},
 	"peerDependencies": {
-		"eslint": "^9.0.0"
+		"eslint": "^10.5.0"
 	}
 }
