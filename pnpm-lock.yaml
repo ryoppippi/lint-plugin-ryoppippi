@@ -7,7 +7,7 @@ settings:
 catalogs:
   default:
     '@types/node':
-      specifier: ^25.9.3
+      specifier: ^25.9.4
       version: 25.9.4
     '@typescript-eslint/parser':
       specifier: ^8.61.1
