@@ -10,7 +10,7 @@ catalog:
   fs-fixture: ^2.14.0
   oxlint: 1.74.0
   publint: ^0.3.21
-  typescript: ^6.0.3
+  typescript: ^7.0.2
   unplugin-unused: ^0.5.7
   vite-plus: 0.2.3
   vitest: 4.1.9
