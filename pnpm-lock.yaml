@@ -28,8 +28,8 @@ catalogs:
       specifier: 1.75.0
       version: 1.75.0
     publint:
-      specifier: ^0.3.21
-      version: 0.3.21
+      specifier: ^0.3.22
+      version: 0.3.22
     typescript:
       specifier: ^6.0.3
       version: 6.0.3
@@ -52,7 +52,7 @@ importers:
         version: 0.0.79
       vite-plus:
         specifier: 'catalog:'
-        version: 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
+        version: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
 
   packages/eslint:
     dependencies:
@@ -77,7 +77,7 @@ importers:
         version: 3.1.0(eslint@10.7.0)(typescript@6.0.3)(vitest@4.1.9(@types/node@26.1.1)(@vitest/browser-preview@4.1.9)(vite@8.0.16(@types/node@26.1.1)))
       publint:
         specifier: 'catalog:'
-        version: 0.3.21
+        version: 0.3.22
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
@@ -86,7 +86,7 @@ importers:
         version: 0.5.7
       vite-plus:
         specifier: 'catalog:'
-        version: 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
+        version: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
       vitest:
         specifier: 'catalog:'
         version: 4.1.9(@types/node@26.1.1)(@vitest/browser-preview@4.1.9)(vite@8.0.16(@types/node@26.1.1))
@@ -105,10 +105,10 @@ importers:
         version: 2.14.0
       oxlint:
         specifier: 'catalog:'
-        version: 1.75.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)))
+        version: 1.75.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)))
       publint:
         specifier: 'catalog:'
-        version: 0.3.21
+        version: 0.3.22
       typescript:
         specifier: 'catalog:'
         version: 6.0.3
@@ -117,7 +117,7 @@ importers:
         version: 0.5.7
       vite-plus:
         specifier: 'catalog:'
-        version: 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
+        version: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
       vitest:
         specifier: 'catalog:'
         version: 4.1.9(@types/node@26.1.1)(@vitest/browser-preview@4.1.9)(vite@8.0.16(@types/node@26.1.1))
@@ -633,8 +633,8 @@ packages:
   '@polka/url@1.0.0-next.29':
     resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
 
-  '@publint/pack@0.1.5':
-    resolution: {integrity: sha512-edgyN2pP07uXiP4tJs0s8KVmU8M8i60YPbbI0/WDeok1mIJHRXz+CgD8I0nelwDkoCh3EWL/G5kGfbuHjsdbvw==}
+  '@publint/pack@0.1.6':
+    resolution: {integrity: sha512-3uVNyGcVplhPZSLVyeIpL7+cIRn1YCSNHLG/rUIlBQMVH8YuN9++YF+5+UDIIO9RW98dujiUoTltO7RDB5bFJA==}
     engines: {node: '>=18'}
 
   '@rolldown/binding-android-arm64@1.0.3':
@@ -1388,8 +1388,8 @@ packages:
     resolution: {integrity: sha512-LaNjtRWUBY++zB5nE/NwcaoMylSPk+S+ZHNB1TzdbMJMny6dynpAGt7X/tl/QYq3TIeE6nxHppbo2LGymrG5Pw==}
     engines: {node: '>=10'}
 
-  package-manager-detector@1.6.0:
-    resolution: {integrity: sha512-61A5ThoTiDG/C8s8UMZwSorAGwMJ0ERVGj2OjoW5pAalsNOg15+iQiPzrLJ4jhZ1HJzmC2PIHT2oEiH3R5fzNA==}
+  package-manager-detector@1.8.0:
+    resolution: {integrity: sha512-yQA4H19AmPEoMUeavPMDIe1higySl/gH/yaQrkT/s07Qp+7pp2hYz30N3z2l5BkjVkF9Ow6o0wjJamm2y7Sn0A==}
 
   path-exists@4.0.0:
     resolution: {integrity: sha512-ak9Qy5Q7jYb2Wwcey5Fpvg2KoAc/ZIhLSLOSBmRmygPsGwkVVt0fZa0qrtMz+m6tJTAHfZQ8FnmB4MG4LWy7/w==}
@@ -1429,8 +1429,8 @@ packages:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
 
-  publint@0.3.21:
-    resolution: {integrity: sha512-OqejcnMV6E9zel2oCrUOJEiiFkGiAAni0A6ibfQNh1k9Gu5z4F+Yso8lllam7AzmV6Do0vp7u3UpZNRBwuXaHQ==}
+  publint@0.3.22:
+    resolution: {integrity: sha512-6Z/scsr5CA7APdwyF35EY88CqgDj1textWuY788DVTJYPCWVv/Wn9G6KmLnrVRnStgYcahqN4wCDLZGSbQJ69w==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -1966,7 +1966,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.29': {}
 
-  '@publint/pack@0.1.5':
+  '@publint/pack@0.1.6':
     dependencies:
       tinyexec: 1.2.4
 
@@ -2235,7 +2235,7 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.0
 
-  '@voidzero-dev/vite-plus-core@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)':
+  '@voidzero-dev/vite-plus-core@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)':
     dependencies:
       '@oxc-project/runtime': 0.138.0
       '@oxc-project/types': 0.138.0
@@ -2244,7 +2244,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 26.1.1
       fsevents: 2.3.3
-      publint: 0.3.21
+      publint: 0.3.22
       typescript: 6.0.3
       unplugin-unused: 0.5.7
 
@@ -2560,7 +2560,7 @@ snapshots:
       type-check: 0.4.0
       word-wrap: 1.2.5
 
-  oxfmt@0.57.0(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))):
+  oxfmt@0.57.0(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))):
     dependencies:
       tinypool: 2.1.0
     optionalDependencies:
@@ -2583,7 +2583,7 @@ snapshots:
       '@oxfmt/binding-win32-arm64-msvc': 0.57.0
       '@oxfmt/binding-win32-ia32-msvc': 0.57.0
       '@oxfmt/binding-win32-x64-msvc': 0.57.0
-      vite-plus: 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
+      vite-plus: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
 
   oxlint-tsgolint@0.24.0:
     optionalDependencies:
@@ -2594,7 +2594,7 @@ snapshots:
       '@oxlint-tsgolint/win32-arm64': 0.24.0
       '@oxlint-tsgolint/win32-x64': 0.24.0
 
-  oxlint@1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))):
+  oxlint@1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))):
     optionalDependencies:
       '@oxlint/binding-android-arm-eabi': 1.72.0
       '@oxlint/binding-android-arm64': 1.72.0
@@ -2616,9 +2616,9 @@ snapshots:
       '@oxlint/binding-win32-ia32-msvc': 1.72.0
       '@oxlint/binding-win32-x64-msvc': 1.72.0
       oxlint-tsgolint: 0.24.0
-      vite-plus: 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
+      vite-plus: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
 
-  oxlint@1.75.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))):
+  oxlint@1.75.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))):
     optionalDependencies:
       '@oxlint/binding-android-arm-eabi': 1.75.0
       '@oxlint/binding-android-arm64': 1.75.0
@@ -2640,7 +2640,7 @@ snapshots:
       '@oxlint/binding-win32-ia32-msvc': 1.75.0
       '@oxlint/binding-win32-x64-msvc': 1.75.0
       oxlint-tsgolint: 0.24.0
-      vite-plus: 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
+      vite-plus: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
 
   p-limit@3.1.0:
     dependencies:
@@ -2650,7 +2650,7 @@ snapshots:
     dependencies:
       p-limit: 3.1.0
 
-  package-manager-detector@1.6.0: {}
+  package-manager-detector@1.8.0: {}
 
   path-exists@4.0.0: {}
 
@@ -2680,10 +2680,10 @@ snapshots:
       ansi-styles: 5.2.0
       react-is: 17.0.2
 
-  publint@0.3.21:
+  publint@0.3.22:
     dependencies:
-      '@publint/pack': 0.1.5
-      package-manager-detector: 1.6.0
+      '@publint/pack': 0.1.6
+      package-manager-detector: 1.8.0
       picocolors: 1.1.1
       sade: 1.8.1
 
@@ -2785,7 +2785,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)):
+  vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)):
     dependencies:
       '@oxc-project/types': 0.138.0
       '@oxlint/plugins': 1.68.0
@@ -2798,9 +2798,9 @@ snapshots:
       '@vitest/snapshot': 4.1.9
       '@vitest/spy': 4.1.9
       '@vitest/utils': 4.1.9
-      '@voidzero-dev/vite-plus-core': 0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)
-      oxfmt: 0.57.0(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)))
-      oxlint: 1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.21)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)))
+      '@voidzero-dev/vite-plus-core': 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)
+      oxfmt: 0.57.0(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)))
+      oxlint: 1.72.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1)))
       oxlint-tsgolint: 0.24.0
       vitest: 4.1.9(@types/node@26.1.1)(@vitest/browser-preview@4.1.9)(vite@8.0.16(@types/node@26.1.1))
     optionalDependencies:
