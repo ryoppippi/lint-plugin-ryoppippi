@@ -48,8 +48,8 @@ importers:
   .:
     devDependencies:
       pkg-pr-new:
-        specifier: 0.0.79
-        version: 0.0.79
+        specifier: 0.0.80
+        version: 0.0.80
       vite-plus:
         specifier: 'catalog:'
         version: 0.2.3(@types/node@26.1.1)(publint@0.3.22)(typescript@6.0.3)(unplugin-unused@0.5.7)(vite@8.0.16(@types/node@26.1.1))
@@ -1409,8 +1409,8 @@ packages:
     resolution: {integrity: sha512-QP88BAKvMam/3NxH6vj2o21R6MjxZUAd6nlwAS/pnGvN9IVLocLHxGYIzFhg6fUQ+5th6P4dv4eW9jX3DSIj7A==}
     engines: {node: '>=12'}
 
-  pkg-pr-new@0.0.79:
-    resolution: {integrity: sha512-ip74NzaakGZha5s/X1T7j+Ez9/bRNDhzxQZTfnzAzoI7zO9JnMRdoiIfCLyy+ZzxxXg8WXRW2WcdvdORI0O30w==}
+  pkg-pr-new@0.0.80:
+    resolution: {integrity: sha512-a6Ie3sxNVrIkx5TQhe5+nbPbyLQg0jnrMNDYoXQpDXBaELxdDgwUVmlVThOSj7oKB3kEIrji5xyhSvWAWf5ABQ==}
     hasBin: true
 
   pngjs@7.0.0:
@@ -2662,7 +2662,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  pkg-pr-new@0.0.79: {}
+  pkg-pr-new@0.0.80: {}
 
   pngjs@7.0.0: {}
 
