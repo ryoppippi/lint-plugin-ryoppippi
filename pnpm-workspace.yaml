@@ -11,7 +11,7 @@ catalog:
   oxlint: 1.75.0
   publint: ^0.3.22
   typescript: ^6.0.3
-  unplugin-unused: ^0.5.7
+  unplugin-unused: ^0.6.0
   vite-plus: 0.2.3
   vitest: 4.1.9
 
