@@ -3,7 +3,7 @@ packages:
 
 catalog:
   "@types/node": ^26.3.0
-  "@typescript-eslint/parser": ^8.67.0
+  "@typescript-eslint/parser": ^8.68.0
   "@typescript-eslint/typescript-estree": ^8.67.0
   eslint: ^10.9.1
   eslint-vitest-rule-tester: ^3.1.0
