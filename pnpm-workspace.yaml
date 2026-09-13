@@ -2,7 +2,7 @@ packages:
   - packages/*
 
 catalog:
-  "@types/node": ^26.5.0
+  "@types/node": ^26.5.1
   "@typescript-eslint/parser": ^8.70.0
   "@typescript-eslint/typescript-estree": ^8.70.0
   eslint: ^10.10.0
