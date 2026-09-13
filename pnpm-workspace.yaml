@@ -6,7 +6,7 @@ catalog:
   "@typescript-eslint/parser": ^8.70.0
   "@typescript-eslint/typescript-estree": ^8.70.0
   eslint: ^10.10.0
-  eslint-vitest-rule-tester: ^3.1.0
+  eslint-vitest-rule-tester: ^3.2.0
   fs-fixture: ^2.16.0
   oxlint: 1.82.0
   publint: ^0.3.24
