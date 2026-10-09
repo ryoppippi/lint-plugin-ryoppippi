@@ -13,5 +13,5 @@
 		"pkg-pr-new": "0.0.90",
 		"vite-plus": "catalog:"
 	},
-	"packageManager": "pnpm@11.28.4"
+	"packageManager": "pnpm@11.28.5"
 }
