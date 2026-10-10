@@ -10,7 +10,7 @@
 		"build": "vp run -r build"
 	},
 	"devDependencies": {
-		"pkg-pr-new": "0.0.90",
+		"pkg-pr-new": "0.0.91",
 		"vite-plus": "catalog:"
 	},
 	"packageManager": "pnpm@11.28.5"
