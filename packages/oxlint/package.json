@@ -48,7 +48,7 @@
 		"vitest": "catalog:"
 	},
 	"peerDependencies": {
-		"oxlint": ">=1.89.0"
+		"oxlint": ">=1.90.0"
 	},
 	"peerDependenciesMeta": {
 		"oxlint": {
