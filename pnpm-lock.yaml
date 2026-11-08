@@ -22,8 +22,8 @@ catalogs:
       specifier: ^3.2.0
       version: 3.2.0
     fs-fixture:
-      specifier: ^2.16.0
-      version: 2.16.0
+      specifier: ^2.16.2
+      version: 2.16.2
     oxlint:
       specifier: 1.91.0
       version: 1.91.0
@@ -102,7 +102,7 @@ importers:
         version: 26.6.6
       fs-fixture:
         specifier: 'catalog:'
-        version: 2.16.0
+        version: 2.16.2
       oxlint:
         specifier: 'catalog:'
         version: 1.91.0(oxlint-tsgolint@0.24.0)(vite-plus@0.2.3(@types/node@26.6.6)(publint@0.3.25)(typescript@6.0.3)(unplugin-unused@0.6.0(rolldown@1.0.3)(vite@8.0.16(@types/node@26.6.6)))(vite@8.0.16(@types/node@26.6.6)))
@@ -1197,8 +1197,8 @@ packages:
   flatted@3.4.2:
     resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
 
-  fs-fixture@2.16.0:
-    resolution: {integrity: sha512-wLgUrK+xH81K9shOMrQATJKbZTCPDxtmlt8s9iyE7vy0/H5KSXgKm9UPFzz7D08VCAYFvqw6JNnlFmJ/ukVWnQ==}
+  fs-fixture@2.16.2:
+    resolution: {integrity: sha512-X0IYcTb6cZt42nlVZEk0cvFdITmlqhkxxfjqMZyUkApvRrDa7HORInQ9EEU29SM2nlJ33eB47H7pos/hbzgz+w==}
     engines: {node: '>=18.0.0'}
 
   fsevents@2.3.3:
@@ -2570,7 +2570,7 @@ snapshots:
 
   flatted@3.4.2: {}
 
-  fs-fixture@2.16.0: {}
+  fs-fixture@2.16.2: {}
 
   fsevents@2.3.3:
     optional: true
