@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1781875589,
-        "narHash": "sha256-8CWrloMR++Ug6luDkGiicm5NtOWYc9n79e8cym8yop8=",
+        "lastModified": 1794192895,
+        "narHash": "sha256-OdBjm181y6YFLFxTlckZESYqY2cEzkc8NjcGxsjV2s8=",
         "owner": "ryoppippi",
         "repo": "nix-vite-plus",
-        "rev": "913c3cee4cb595d133678fb8438ca08f7286e23e",
+        "rev": "9c875a9cd51802967c997207357f15ebab84c8f9",
         "type": "github"
       },
       "original": {
