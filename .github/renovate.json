@@ -12,5 +12,11 @@
 	"dependencyDashboard": false,
 	"automerge": true,
 	"branchConcurrentLimit": 0,
-	"stabilityDays": 3
+	"stabilityDays": 3,
+	"packageRules": [
+		{
+			"groupName": "vite-plus",
+			"matchPackageNames": ["vite-plus", "@voidzero-dev/vite-plus-core", "vitest"]
+		}
+	]
 }
