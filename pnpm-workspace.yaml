@@ -12,9 +12,9 @@ catalog:
   publint: ^0.3.25
   typescript: ^6.0.3
   unplugin-unused: ^0.6.0
-  vite-plus: 1.5.0
+  vite-plus: 1.5.1
   vitest: 5.1.0
-  vite: npm:@voidzero-dev/vite-plus-core@1.5.0
+  vite: npm:@voidzero-dev/vite-plus-core@1.5.1
 
 onlyBuiltDependencies:
   - esbuild
