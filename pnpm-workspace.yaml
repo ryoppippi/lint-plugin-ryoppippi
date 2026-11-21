@@ -14,7 +14,7 @@ catalog:
   unplugin-unused: ^0.6.0
   vite-plus: 1.6.0
   vitest: 5.1.0
-  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+  vite: npm:@voidzero-dev/vite-plus-core@8.3.8000
 
 onlyBuiltDependencies:
   - esbuild
