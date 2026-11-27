@@ -8,7 +8,7 @@ catalog:
   eslint: ^10.15.0
   eslint-vitest-rule-tester: ^3.2.0
   fs-fixture: ^2.16.2
-  oxlint: 1.94.0
+  oxlint: 1.95.0
   publint: ^0.3.25
   typescript: ^6.0.3
   unplugin-unused: ^0.6.0
